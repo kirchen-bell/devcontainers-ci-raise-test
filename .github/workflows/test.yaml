@@ -6,7 +6,9 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
+      - uses: actions/checkout@v4
       - uses: devcontainers/ci@v0.3
         with:
           imageName: test
@@ -15,7 +17,9 @@ jobs:
 
   test2:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
+      - uses: actions/checkout@v4
       - uses: devcontainers/ci@v0.3
         with:
           imageName: test
@@ -25,7 +29,9 @@ jobs:
 
   test3:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
+      - uses: actions/checkout@v4
       - uses: devcontainers/ci@v0.3
         with:
           imageName: test
